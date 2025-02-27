@@ -31,6 +31,15 @@ let getComputerChoice = Math.floor(Math.random() * 3);
 
 // Establish Score variables
 
+humanScore = 0; humanScore++; if (humanScore >= 5) {
+    console.log("Human Wins!");
+    endGame();
+} 
+computerScore = 0; computerScore++; if (computerScore >= 5) {
+    console.log("Computer Wins!");
+    endGame();
+}
+
 
 // Establish Round
 
