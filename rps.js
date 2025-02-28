@@ -1,34 +1,35 @@
-// Play Single Round
+// Define Human and Computer Choices
 
-humanScore = 0;
-computerScore = 0;
-
-function playRound() {
-    let getComputerChoice = Math.floor(Math.random() * 3);
-        let computerChoice; {
-            if (getComputerChoice === 0) {
-                computerChoice = "rock";
-            }
-            else if (getComputerChoice === 1) {
-                computerChoice = "paper";
-            }
-            else if (getComputerChoice === 2) {
-                computerChoice = "scissors";
-            }
-
-    let getHumanChoice = prompt("Choose Rock, Paper, or Scissors! Spell correctly!");
-        let humanChoice = getHumanChoice.toLowerCase();
-            if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
-                return humanChoice;
-            }
-            else {
-                alert("Invalid Response! Try Again.");
-            }
-            
-   
-    }    
+function getComputerChoice() {
+    let computerChoice = Math.floor(Math.random() * 3);
+        if (getComputerChoice === 0) {
+            computerChoice = "rock";
+        }
+        else if (getComputerChoice === 1) {
+            computerChoice = "paper";
+        }
+        else if (getComputerChoice === 2) {
+            computerChoice = "scissors";
+        }
 }
 
-playRound();
+function getHumanChoice() {
+    let humanChoice = prompt("Choose Rock, Paper, or Scissors! Spell correctly!");
+        humanChoice = getHumanChoice.toLowerCase();
+        if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
+            return humanChoice;
+        }
+        else {
+            alert("Invalid Response! Try Again.")
+            return getHumanChoice;
+        }      
+}
 
-// Play Entire Game
+let humanScore = 0;
+let computerScore = 0;
+
+// Define Round
+
+function playRound() {
+    
+}
